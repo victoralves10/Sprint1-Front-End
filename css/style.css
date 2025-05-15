@@ -50,21 +50,15 @@ header nav ul li a {
     font-size: 15px;
 }
 
-/* Estilo dos links firula */
-header ul li a:hover {
-    background-color: #A3BBDD;
-    
-    padding: 10px;
-    border-radius: 8px; 
-    
+
+/* Nome da página de navegação colorida */
+header nav ul li a.active {
+    color: #000;
+    background-color: #A3BBDD; 
+    padding: 5px 10px;
+    border-radius: 5px;
 }
-/* #botao-pagina{
-    background-color: #A3BBDD;
-    
-    padding: 10px;
-    border-radius: 8px;
-    
-} */
+
 
 /* Main */
 main {
@@ -88,6 +82,92 @@ footer p{
 /* Logo do hc */
 header img{
     position: absolute;
-    left: 10px;
+    left: 80px;
     /* right: 30px; */
+}
+
+/* Seção de Integrantes */
+main.integrantes h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.lista-integrantes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.integrante {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.integrante img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.integrante p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.integrante .links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+.integrante .links a:hover {
+    color: #0077b5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header img {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .lista-integrantes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .integrante {
+        width: 90%;
+    }
+
+    main.integrantes h1 {
+        font-size: 22px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
 }
