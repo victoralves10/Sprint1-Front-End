@@ -1,0 +1,60 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    background-color: #A3BBDD;
+}
+
+/* Barrinha superior fina */
+.top-bar {
+    background-color: #D1D8E6; /*  azul bem claro */
+    height: 20px;
+    width: 100%;
+}
+  
+/* Header com menu */
+header {
+    background-color: #fff; /* fundo branco */
+    height: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+/* Lista de navegação */
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Estilo dos links */
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Main */
+/* main {
+    background-color: #a3bbdd;
+    padding: 40px 20px;
+    min-height: 600px;
+} */
+
+footer{
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
