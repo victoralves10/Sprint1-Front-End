@@ -19,3 +19,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// -----
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form-contato");
+    const mensagem = document.getElementById("form-msg");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const msg = document.getElementById("mensagem").value.trim();
+
+        if (nome === "" || email === "" || msg === "") {
+            mensagem.textContent = "Por favor, preencha todos os campos.";
+            mensagem.style.color = "red";
+            return;
+        }
+
+        mensagem.textContent = "Mensagem enviada com sucesso!";
+        mensagem.style.color = "green";
+
+        form.reset(); // limpa os campos
+    });
+});
+

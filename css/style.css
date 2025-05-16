@@ -70,7 +70,6 @@ main {
     padding: 40px 20px;
 }
 
-
 /* Footer */
 footer {
     background-color: #fff;
@@ -80,7 +79,7 @@ footer {
     font-size: 14px;
 }
 
-footer p{
+footer p {
     padding: 8px;
 }
 
@@ -111,7 +110,7 @@ footer p{
     background-color: #A3BBDD;
     color: #000;
     padding: 15px 20px;
-    border: 4px solid #fff;
+    border: 1px solid #fff; /* Borda branca fina */
     cursor: pointer;
     font-size: 18px;
     text-align: left;
@@ -137,8 +136,6 @@ footer p{
     font-size: 16px;
     color: #333;
 }
-
-
 
 /* Seção de Integrantes */
 main.integrantes h1 {
@@ -187,8 +184,68 @@ main.integrantes h1 {
     color: #0077b5;
 }
 
+/* Página de Contato */
+.contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+form button {
+    padding: 12px;
+    background-color: #A3BBDD;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #8aaad1;
+}
+
+#form-msg {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
 /* Responsividade */
-@media (max-width: 768px) {
+
+/* Extra Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
     header {
         flex-direction: column;
         height: auto;
@@ -206,13 +263,15 @@ main.integrantes h1 {
         gap: 10px;
     }
 
-    .lista-integrantes {
-        flex-direction: column;
-        align-items: center;
+    .faq-question {
+        font-size: 16px;
+        padding: 12px 16px;
     }
-}
 
-@media (max-width: 480px) {
+    .faq-answer p {
+        font-size: 14px;
+    }
+
     .integrante {
         width: 90%;
     }
@@ -223,5 +282,90 @@ main.integrantes h1 {
 
     header nav ul li a {
         font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 13px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .contato {
+        padding: 20px;
+    }
+
+    .contato h1 {
+        font-size: 22px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+    .faq h1,
+    .contato h1 {
+        font-size: 24px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .contato {
+        padding: 40px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 15px;
+    }
+
+    form button {
+        font-size: 16px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .faq,
+    .contato {
+        max-width: 800px;
+    }
+
+    .faq h1,
+    .contato h1 {
+        font-size: 28px;
+    }
+}
+
+/* Extra-Large devices (1300px and up) */
+@media (min-width: 1300px) {
+    body {
+        font-size: 16px;
+    }
+
+    .faq-question {
+        font-size: 20px;
+    }
+
+    .faq-answer p {
+        font-size: 16px;
+    }
+
+    .contato {
+        padding: 50px;
     }
 }
