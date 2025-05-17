@@ -1,0 +1,262 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML e Body para layout de altura total */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body */
+body {
+    background-color: #A3BBDD;
+}
+
+/* Header com menu */
+header {
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between; /* Logo na esquerda e menu centralizado */
+}
+
+header nav {
+    flex: 1; /* Menu ocupa espaço entre logo e borda direita */
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+}
+
+/* Lista de navegação */
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    width: auto;
+}
+
+/* Estilo dos links */
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover nos links da navegação */
+header nav ul li a:hover {
+    background-color: #8ca2cb;
+    color: #fff;
+}
+
+/* Nome da página de navegação colorida (botão ativo) */
+header nav ul li a.active {
+    color: #000;
+    background-color: #A3BBDD; 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Logo do hc */
+header img {
+    flex-shrink: 0; /* evita que a logo encolha */
+    width: 80px; /* ajuste se necessário */
+}
+
+
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Caixa branca */
+.content-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    width: 100%;
+    color: #000;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/* Nome da página de navegação colorida */
+header nav ul li a.active {
+    color: #000;
+    background-color: #A3BBDD; 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Botão bonito */
+.btn {
+    background: linear-gradient(135deg, #89a7d0, #5c7ea7);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #5c7ea7, #3f628f);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+
+footer p {
+    padding: 8px;
+}
+
+/* Responsividade */
+
+/* Extra Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header img {
+        margin-bottom: 10px;
+        width: 80px; /* mantém o tamanho da logo */
+    }
+
+    header nav {
+        flex: unset;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .content-box {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .content-box h1 {
+        font-size: 24px;
+    }
+
+    .content-box p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+/* Dispositivos pequenos (tablets e telefones grandes, 600px ou mais) */
+@media (min-width: 600px) {
+    .content-box h1 {
+        font-size: 28px;
+    }
+}
+
+/* Dispositivos médios (tablets horizontal, 768px ou mais) */
+@media (min-width: 768px) {
+    main {
+        padding: 40px 20px;
+    }
+
+    .content-box {
+        padding: 40px;
+    }
+
+    .content-box p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 14px 40px;
+    }
+}
+
+/* Dispositivos grandes (laptops/desktops, 992px e superiores) */
+@media (min-width: 992px) {
+    header nav ul li a {
+        font-size: 15px;
+    }
+
+    .content-box {
+        max-width: 900px;
+    }
+
+    .content-box h1 {
+        font-size: 32px;
+    }
+}

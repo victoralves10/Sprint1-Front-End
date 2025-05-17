@@ -17,22 +17,22 @@ body {
     background-color: #A3BBDD;
 }
 
-/* Barrinha superior fina */
-.top-bar {
-    background-color: #D1D8E6;
-    height: 20px;
-    width: 100%;
-}
-  
 /* Header com menu */
 header {
     background-color: #fff;
     height: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 0 20px;
+    justify-content: space-between; /* Logo na esquerda e menu centralizado */
 }
-  
+
+header nav {
+    flex: 1; /* Menu ocupa espaço entre logo e borda direita */
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+}
+
 /* Lista de navegação */
 header nav ul {
     display: flex;
@@ -40,17 +40,28 @@ header nav ul {
     gap: 30px;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    width: auto;
 }
-  
+
 /* Estilo dos links */
 header nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
     font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Nome da página de navegação colorida */
+/* Hover nos links da navegação */
+header nav ul li a:hover {
+    background-color: #8ca2cb;
+    color: #fff;
+}
+
+/* Nome da página de navegação colorida (botão ativo) */
 header nav ul li a.active {
     color: #000;
     background-color: #A3BBDD; 
@@ -59,9 +70,9 @@ header nav ul li a.active {
 }
 
 /* Logo do hc */
-header img{
-    position: absolute;
-    left: 80px;
+header img {
+    flex-shrink: 0; /* evita que a logo encolha */
+    width: 80px; /* ajuste se necessário */
 }
 
 /* Main */
@@ -146,10 +157,12 @@ main.integrantes h1 {
 
 .lista-integrantes {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centraliza integrantes */
     flex-wrap: wrap;
     gap: 40px;
     padding: 0 20px;
+    max-width: 1200px; /* limite máximo para evitar quebra estranha */
+    margin: 0 auto; /* centraliza container */
 }
 
 .integrante {
@@ -255,12 +268,21 @@ form button:hover {
     header img {
         position: static;
         margin-bottom: 10px;
+        width: 80px;
+    }
+
+    header nav {
+        flex: unset;
+        justify-content: center;
+        width: 100%;
     }
 
     header nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        margin: 0;
+        padding: 0;
     }
 
     .faq-question {
@@ -306,7 +328,7 @@ form button:hover {
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Dispositivos pequenos (tablets e telefones grandes, 600px ou mais) */
 @media (min-width: 600px) {
     .faq h1,
     .contato h1 {
@@ -314,7 +336,7 @@ form button:hover {
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Dispositivos médios (tablets horizontal, 768px ou mais) */
 @media (min-width: 768px) {
     .faq-question {
         font-size: 18px;
@@ -334,7 +356,7 @@ form button:hover {
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Dispositivos grandes (laptops/desktops, 992px e superiores) */
 @media (min-width: 992px) {
     header nav ul li a {
         font-size: 16px;
@@ -351,7 +373,7 @@ form button:hover {
     }
 }
 
-/* Extra-Large devices (1300px and up) */
+/* Dispositivos extragrandes (1300px e superior) */
 @media (min-width: 1300px) {
     body {
         font-size: 16px;
