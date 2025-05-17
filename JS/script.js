@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     perguntas.forEach((btn) => {
         btn.addEventListener("click", (e) => {
-            e.preventDefault(); // evita o pulo da página
+            e.preventDefault(); // evita o pulo da pagina
 
             const resposta = btn.nextElementSibling;
 
