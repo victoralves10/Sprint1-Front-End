@@ -121,7 +121,7 @@ footer p {
     background-color: #A3BBDD;
     color: #000;
     padding: 15px 20px;
-    border: 1px solid #fff; /* Borda branca fina */
+    border: 5px solid #fff; /* Borda branca fina */
     cursor: pointer;
     font-size: 18px;
     text-align: left;
@@ -254,6 +254,40 @@ form button:hover {
     color: green;
     text-align: center;
 }
+
+/* Página Inicial */
+main.inicio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main.inicio section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+main.inicio h1,
+main.inicio h2 {
+    color: #000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+main.inicio p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+
 
 /* Responsividade */
 
