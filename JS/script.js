@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     perguntas.forEach((btn) => {
         btn.addEventListener("click", (e) => {
-            e.preventDefault(); // evita o pulo da pagina
+            e.preventDefault();
 
             const resposta = btn.nextElementSibling;
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// -----
+// ---------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-contato");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mensagem.textContent = "Mensagem enviada com sucesso!";
         mensagem.style.color = "green";
 
-        form.reset(); // limpa os campos
+        form.reset();
     });
 });
 
