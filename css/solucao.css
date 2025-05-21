@@ -61,7 +61,7 @@ header nav ul li a:hover {
     color: #fff;
 }
 
-/* Nome da página de navegação colorida (botão ativo) */
+/* Nome da página de navegação colorida (botão ativado) */
 header nav ul li a.active {
     color: #000;
     background-color: #A3BBDD; 
@@ -72,7 +72,7 @@ header nav ul li a.active {
 /* Logo do hc */
 header img {
     flex-shrink: 0; /* evita que a logo encolha */
-    width: 80px; /* ajuste se necessário */
+    width: 80px;
 }
 
 /* Main */
