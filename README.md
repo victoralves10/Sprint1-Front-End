@@ -17,7 +17,7 @@ um arquivo faq.html  -> Página de perguntas Frequentes
 
 [INTEGRANTES]: 
 Eduardo Batista Locaspi – RM561713 – 1TDSPI
-Victor Alves Lopes – RM561713 – 1TDSPI
-Alan Jorsh Mejia – RM561713 – 1TDSPI
+Victor Alves Lopes – RM561833 – 1TDSPI 
+Alan Jhorsh Mejia – RM563857 – 1TDSPI
 
 [LINK DO REPOSITÓRIO]: https://github.com/victoralves10/Sprint1-Front-End.git
